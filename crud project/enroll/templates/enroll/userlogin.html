@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+    <style>
+        .er{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+            <p class="er">{{error}}</p>
+          {% endfor %}
+        {% endif %}
+        {{form.as_p}}
+        <input type="submit" value="Login">
+    </form>
+    <a href="{% url 'signup' %}">signup</a>
+    
+</body>
+</html>
