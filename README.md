@@ -1,1 +1,1 @@
-# Crud-project-using-django-with-python
+# Crud Project Along With Registration And Login system using django with python
